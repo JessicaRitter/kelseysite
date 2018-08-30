@@ -1,5 +1,5 @@
 from jinja2 import StrictUndefined
-from flask_debugtoolbar import DebugToolbarExtension
+# from flask_debugtoolbar import DebugToolbarExtension
 from flask import Flask, jsonify, render_template, redirect, request, flash, session
 # from flask_debugtoolbar import DebugToolbarExtension
 # import os
