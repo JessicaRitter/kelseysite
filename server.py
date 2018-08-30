@@ -2,7 +2,7 @@ from jinja2 import StrictUndefined
 # from flask_debugtoolbar import DebugToolbarExtension
 from flask import Flask, jsonify, render_template, redirect, request, flash, session
 # from flask_debugtoolbar import DebugToolbarExtension
-# import os
+import os
 
 
 app = Flask(__name__)
@@ -38,8 +38,8 @@ if __name__ == '__main__':
     #no caching for templates
     app.jinja_env.auto_reload = app.debug 
 
-    # connect_to_db(app)
+    PORT = int(os.environ.get("PORT", 5000))
 
-    # DebugToolbarExtension(app)
+    DEBUT = "NO_DEBUG" not in os.environ
 
-    app.run(host='0.0.0.0')
+    app.run(host='0.0.0.0', port=PORT, debug=DEBUG)
