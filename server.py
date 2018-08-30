@@ -38,7 +38,7 @@ if __name__ == '__main__':
     #no caching for templates
     app.jinja_env.auto_reload = app.debug 
 
-    connect_to_db(app)
+    # connect_to_db(app)
 
     # DebugToolbarExtension(app)
 
