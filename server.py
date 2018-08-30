@@ -34,12 +34,12 @@ def show_home():
 
 
 if __name__ == '__main__':
-    app.debug = True
+    # app.debug = True
     #no caching for templates
     app.jinja_env.auto_reload = app.debug 
 
     PORT = int(os.environ.get("PORT", 5000))
 
-    DEBUT = "NO_DEBUG" not in os.environ
+    
 
-    app.run(host='0.0.0.0', port=PORT, debug=DEBUG)
+    app.run(host='0.0.0.0', port=PORT)
